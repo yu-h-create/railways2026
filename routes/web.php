@@ -14,3 +14,8 @@ Route::get('/login',[LoginController::class,'showLoginForm'])
 
 Route::post('/login', [LoginController::class, 'login']);
 
+Route::view('/dashboard','dashboard')
+   ->name('dashboard');
+
+Route::view('/railway', 'railway')
+    ->name('railway');
