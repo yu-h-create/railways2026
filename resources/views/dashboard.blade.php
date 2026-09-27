@@ -9,10 +9,7 @@
             ようこそ、{{ Auth::user()->name }}さん
         </p>
 
-        <a
-            href="{{ route('railway') }}"
-            class="block rounded-xl border bg-white p-6 shadow-sm"
-        >
+        <a href="{{ route('railway') }}" class="block rounded-xl border bg-white p-6 shadow-sm">
             <h2 class="text-xl font-bold">
                 時刻表を検索する
             </h2>
@@ -22,4 +19,12 @@
             </p>
         </a>
     </div>
+
+    <form method="POST" action="{{ route('logout') }}" class="mt-8">
+        @csrf
+
+        <button type="submit" class="rounded border px-4 py-2">
+            ログアウト
+        </button>
+    </form>
 </x-layouts.livewire>
