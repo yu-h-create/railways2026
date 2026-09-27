@@ -19,3 +19,6 @@ Route::view('/dashboard','dashboard')
 
 Route::view('/railway', 'railway')
     ->name('railway');
+
+Route::post('/logout',[LoginController::class,'logout'])
+    ->name('logout');
