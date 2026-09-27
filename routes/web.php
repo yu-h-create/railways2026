@@ -15,9 +15,11 @@ Route::get('/login',[LoginController::class,'showLoginForm'])
 Route::post('/login', [LoginController::class, 'login']);
 
 Route::view('/dashboard','dashboard')
+   ->middleware('auth')
    ->name('dashboard');
 
 Route::view('/railway', 'railway')
+    ->middleware('auth')
     ->name('railway');
 
 Route::post('/logout',[LoginController::class,'logout'])
